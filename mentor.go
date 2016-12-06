@@ -57,9 +57,7 @@ func (s *MentorServer) Start(port int, upload bool, uploadDir string,
 }
 
 func (s *MentorServer) UploadHandler (w http.ResponseWriter, r *http.Request) {
-
-    log.Printf("Handling upload")
-    log.Printf(r.Method)
+    log.Printf("[%s] %s %s", r.RemoteAddr, r.Method, r.URL.Path)
     switch r.Method {
         case "GET":
             t := template.New("IndexPage")
@@ -89,6 +87,7 @@ func (s *MentorServer) UploadHandler (w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *MentorServer) IndexHandler (w http.ResponseWriter, r *http.Request) {
+    log.Printf("[%s] %s %s", r.RemoteAddr, r.Method, r.URL.Path)
     if r.URL.Path != "/" {
         if _, ok := s.Files[r.URL.Path]; ok {
             http.ServeFile(w, r, r.URL.Path)
@@ -129,5 +128,6 @@ func main() {
     }
 
     var s MentorServer
+    log.Print("Listening on http://0.0.0.0:", *port)
     s.Start(*port, *upload, *uploadDir, *uploadLimit, root)
 }
