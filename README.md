@@ -12,14 +12,14 @@ Installation
  * Linux
 
 ```sh
-$ wget http://s3-eu-west-1.amazonaws.com/mentor2/mentor -O /usr/local/bin/mentor
+$ wget http://goo.gl/u5CB8O -O /usr/local/bin/mentor
 $ chmod +x !$
 ```
 
  * Mac
 
 ```sh
-$ wget http://s3-eu-west-1.amazonaws.com/mentor2/mentor-mac -O /usr/local/bin/mentor
+$ wget goo.gl/8aa8KZ -O /usr/local/bin/mentor
 $ chmod +x !$
 ```
 Usage
