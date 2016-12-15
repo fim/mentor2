@@ -12,7 +12,7 @@ Installation
  * Linux
 
 ```sh
-$ wget http://goo.gl/u5CB8O -O /usr/local/bin/mentor
+$ curl -sL http://mentor.sh/linux -o /usr/local/bin/mentor
 $ sha256sum !$
 # Verify SHA
 $ chmod +x !$
@@ -21,11 +21,21 @@ $ chmod +x !$
  * Mac
 
 ```sh
-$ wget goo.gl/8aa8KZ -O /usr/local/bin/mentor
+$ curl -sL http://mentor.sh/darwin -o /usr/local/bin/mentor
 $ sha256sum !$
 # Verify SHA
 $ chmod +x !$
 ```
+
+ * FreeBSD
+
+```sh
+$ curl -sL http://mentor.sh/freebsd -o /usr/local/bin/mentor
+$ sha256sum !$
+# Verify SHA
+$ chmod +x !$
+```
+
 Usage
 -----
 
